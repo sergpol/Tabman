@@ -58,7 +58,7 @@ public extension TabmanBar {
         /// - Parameter title: The title to display.
         /// - Parameter image: Image to display.
         /// - Parameter context: Object that can be used to provide external context for the item.
-        public init(title: String, image: UIImage, context: Any? = nil) {
+        public init(title: String, image: UIImage, context: Any? = nil, tabColor: UIColor? = nil, titleColor: UIColor? = nil) {
             self.title = title
             self.image = image
 			self.context = context
