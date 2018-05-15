@@ -62,9 +62,10 @@ class TabmanItemColorCrossfadeTransition: TabmanItemTransition {
                                                  and: bar.selectedColor,
                                                  percent: 1.0 - progress)
         
+        // MARK: my changes!
         targetButton.tintColor = targetColor
-        targetButton.setTitleColor(targetColor, for: .normal)
+        //targetButton.setTitleColor(targetColor, for: .normal)
         oldTargetButton.tintColor = oldTargetColor
-        oldTargetButton.setTitleColor(oldTargetColor, for: .normal)
+        //oldTargetButton.setTitleColor(oldTargetColor, for: .normal)
     }
 }

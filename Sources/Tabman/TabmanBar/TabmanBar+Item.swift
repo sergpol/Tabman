@@ -22,6 +22,10 @@ public extension TabmanBar {
 		/// Context of the item for external reference.
 		public private(set) var context: Any?
         
+        // MARK: my changes!
+        public private(set) var tabColor: UIColor?
+        public private(set) var titleColor: UIColor?
+        
         public var accessibilityLabel: String?
         public var accessibilityHint: String?
         public var accessibilityTraits: UIAccessibilityTraits?
@@ -32,9 +36,12 @@ public extension TabmanBar {
         ///
         /// - Parameter title: The title to display.
         /// - Parameter context: Object that can be used to provide external context for the item.
-		public init(title: String, context: Any? = nil) {
+		public init(title: String, context: Any? = nil, tabColor: UIColor? = nil, titleColor: UIColor? = nil) {
             self.title = title
 			self.context = context
+            // MARK: my changes!
+            self.tabColor = tabColor
+            self.titleColor = titleColor
         }
         
         /// Create an item with an image.
@@ -55,6 +62,9 @@ public extension TabmanBar {
             self.title = title
             self.image = image
 			self.context = context
+            // MARK: my changes!
+            self.tabColor = tabColor
+            self.titleColor = titleColor
         }
     }
 }

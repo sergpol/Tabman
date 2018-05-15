@@ -45,10 +45,11 @@ internal class TabmanButtonBar: TabmanBar {
             }
             
             let update = {
-                self.focussedButton?.setTitleColor(self.selectedColor, for: .normal)
+                // MARK: my changes!
+                //self.focussedButton?.setTitleColor(self.selectedColor, for: .normal)
                 self.focussedButton?.tintColor = self.selectedColor
                 self.focussedButton?.titleLabel?.font = self.selectedTextFont
-                oldValue?.setTitleColor(self.color, for: .normal)
+                //oldValue?.setTitleColor(self.color, for: .normal)
                 oldValue?.tintColor = self.color
                 oldValue?.titleLabel?.font = self.textFont
             }
@@ -237,6 +238,12 @@ internal class TabmanButtonBar: TabmanBar {
             // appearance
             button.titleLabel?.adjustsFontSizeToFitWidth = true
             button.titleLabel?.font = self.textFont
+            
+            ///MARK: my changes!
+            if let tabColor = item.tabColor, let titleColor = item.titleColor {
+                button.setTitleColor(titleColor, for: .normal)
+                button.backgroundColor = tabColor
+            }
             
             // layout
             button.set(.height, to: Defaults.minimumItemHeight, priority: UILayoutPriority(500))
